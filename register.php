@@ -23,7 +23,9 @@ if (isset($_POST['register'])) {
           VALUES('$f_name','$l_name', '$email', '$password','$phone')";
     mysqli_query($db, $query);
     echo "User added!!!";
-    header('location: login.html');
+    echo '<script type="text/javascript">';
+    echo 'window.location.href="login.html";';
+    echo '</script>';
   
 }
 ?>
